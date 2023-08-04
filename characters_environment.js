@@ -44,8 +44,9 @@ var gameConfig={
   timeScores: 0,
   scores: 0
 }
-
-
+noseX = "";
+noseY = "";
+GameStatus = "";
 /*=====  End of Variables  ======*/
 
 
@@ -53,8 +54,14 @@ var gameConfig={
 =            Game Status             =
 ====================================*/
 
+function startGame() {
+  GameStatus = "start";
+  document.getElementById("status").innerHTML = "Game is Loading";
+}
+
 function game(){
 
+  console.log("noseX = "+noseX +", noseY = "+noseY);
   instializeInDraw();
   moveEnvironment(mario);
   drawSprites();
